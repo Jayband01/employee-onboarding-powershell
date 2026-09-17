@@ -1,6 +1,6 @@
 # Employee Onboarding & Access Automation
 
-I built this project to practice PowerShell with a common HR-to-IT workflow: checking new-hire records and working out which access each person would need. It gave me practice with CSV and JSON, validation, exception handling, and access rules.
+I built this project to practice PowerShell with a common HR-to-IT workflow, checking new-hire records and working out which access each person would need. It gave me practice with CSV and JSON, validation, exception handling, and access rules.
 
 Everything is fictional. The script creates a simulated provisioning plan; it does not create accounts or connect to Active Directory, Microsoft Entra ID, or any other service.
 
