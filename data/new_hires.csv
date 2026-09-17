@@ -1,12 +1,12 @@
 EmployeeID,FirstName,LastName,Department,JobTitle,Manager,StartDate,Email,EmploymentType,Location
-E1041,Amara,Wallace,Finance,Financial Analyst,Diane Mercer,2026-10-05,amara.wallace@example.com,Full-Time,"Orlando, FL"
-E1042,Ethan,Navarro,Information Technology,IT Support Analyst,Victor Sloan,2026-10-12,ethan.navarro@example.com,Full-Time,"Chicago, IL"
-E1043,Camille,Nguyen,Human Resources,HR Coordinator,Monica Fields,2026-10-19,camille.nguyen@example.com,Contract,"Dallas, TX"
+E1041, Amara ,Wallace,finance,Financial Analyst,Diane Mercer,2026-10-05,amara.wallace@example.com,Full-Time,"Orlando, FL"
+E1042,Ethan,Navarro, information TECHNOLOGY ,IT Support Analyst  ,Victor Sloan,2026-10-12,ethan.navarro@example.com,Full-Time,"Chicago, IL"
+E1043,Camille,Nguyen,Human Resources,HR Coordinator,Monica Fields,2026-10-19,camille.nguyen@example.com,contract,"Dallas, TX"
 E1044,Darius,Reed,Operations,Operations Analyst,Terrence Boyd,2026-10-05,darius.reed@example.com,Full-Time,Remote
-E1045,Isabel,Moreno,Facilities,Facilities Coordinator,Audrey Keller,2026-10-12,isabel.moreno@example.com,Part-Time,"Atlanta, GA"
+E1045,Isabel,Moreno,Facilities,Facilities Coordinator,Audrey Keller,2026-10-12,isabel.moreno@example.com,part-time,"Atlanta, GA"
 E1046,Caleb,Whitaker,Procurement,Procurement Analyst,Rafael Dominguez,2026-10-19,caleb.whitaker@example.com,Full-Time,"Orlando, FL"
-E1047,Nina,Desai,Data Analytics,Data Analyst,Helen Wu,2026-10-05,nina.desai@example.com,Full-Time,"Chicago, IL"
-E1048,Owen,Fletcher,Finance,Accounts Payable Specialist,Diane Mercer,2026-10-12,owen.fletcher@example.com,Contract,"Dallas, TX"
+E1047,Nina,Desai,Data Analytics, Data Analyst ,Helen Wu,2026-10-05,nina.desai@example.com,Full-Time,"Chicago, IL"
+ E1048 ,Owen,Fletcher,Finance,Accounts Payable Specialist,Diane Mercer,2026-10-12,owen.fletcher@example.com ,Contract,"Dallas, TX"
 E1049,Tessa,Morgan,Information Technology,Systems Analyst,Victor Sloan,2026-10-19,tessa.morgan@example.com,Full-Time,Remote
 E1050,Malik,Hayes,Human Resources,Recruiting Specialist,Monica Fields,2026-10-05,malik.hayes@example.com,Part-Time,"Atlanta, GA"
 E1051,Vivian,Park,Operations,Service Coordinator,Terrence Boyd,2026-10-12,vivian.park@example.com,Full-Time,"Orlando, FL"
@@ -34,8 +34,8 @@ E1072,Nolan,Rhodes,Operations,Operations Analyst,,2026-10-12,nolan.rhodes@exampl
 E1073,Kiara,Sutton,Facilities,,Audrey Keller,2026-10-19,kiara.sutton@example.com,Contract,"Dallas, TX"
 E1074,Elise,Abbott,Marketing,Procurement Analyst,Rafael Dominguez,2026-10-05,elise.abbott@example.com,Full-Time,Remote
 E1075,Mateo,Delgado,Data Analytics,Data Analyst,Helen Wu,2026-10-12,mateo.delgado@example.com,Part-Time,"Atlanta, GA"
-E1076,Paige,Henson,Finance,Accounts Payable Specialist,Diane Mercer,2026-10-19,mateo.delgado@example.com,Full-Time,"Orlando, FL"
+E1076,Paige,Henson,Finance,Accounts Payable Specialist,Diane Mercer,2026-10-19, mateo.delgado@example.com ,Full-Time,"Orlando, FL"
 ,Roman,Blake,Information Technology,Systems Analyst,Victor Sloan,,roman.blake@example.com,Full-Time,"Chicago, IL"
 E1078,Jasmine,Holt,Human Resources,Recruiting Specialist,Monica Fields,2026-10-12,jasmine.holt.example.com,Contract,"Dallas, TX"
 E1079,   ,Walsh,Operations,Service Coordinator,Terrence Boyd,2026-10-19,theo.walsh@example.com,Temporary,Remote
-E1079,Sabrina,Costa,Facilities,Maintenance Planner,Audrey Keller,2026-02-30,sabrina.costa@example.com,Part-Time,"Atlanta, GA"
+ e1079 ,Sabrina,Costa,Facilities,Maintenance Planner,Audrey Keller,2026-02-30,sabrina.costa@example.com,Part-Time,"Atlanta, GA"

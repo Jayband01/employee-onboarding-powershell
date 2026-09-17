@@ -1,10 +1,6 @@
-# Project Requirements
+# Input and Report Contract
 
-## Business Problem
-HR intake files can contain missing information or conflicting identifiers. IT needs a consistent way to flag those requests and explain the access proposed for complete records.
-
-## Scope
-Build a local PowerShell simulation that validates a CSV and produces a provisioning plan, audit log, and HTML summary. All employee records, security groups, systems, and permissions are fictional. No real accounts, access changes, network calls, or administrative rights are in scope.
+Exact input, validation, and output rules for the local simulation. See the README for the workflow and run command.
 
 ## Assumptions
 Target Windows PowerShell 5.1 using built-in commands and .NET types. Full-Time, Part-Time, and Contract employees use the same access policy. Location does not affect access. Manager is required text, not a directory lookup. Dates may be past or future; no current-date cutoff applies. Needs Review is reserved for a future approval workflow and is not emitted in this version.
@@ -58,6 +54,3 @@ Write reports to temporary files first, then replace their final names only once
 
 ## Audit and Security
 Keep all results, specific reasons, applied-rule group lists, rule version, and configuration hash. This is a per-run review log, not a tamper-proof audit system. Reports are overwritten; archive them separately if history is needed. Never store passwords, tokens, or real employee records in this repository. Never evaluate input as code. Escape HTML and protect CSV cells beginning with =, +, -, or @ by prefixing an apostrophe at export time; keep original trimmed values in JSON.
-
-## Limitations
-No provisioning, license checks, manager verification, approval routing, access revocation, or persistent employee registry. Duplicate checks cover only the current intake file. Free-text job titles without a matching rule receive no title-specific additions.

@@ -40,8 +40,7 @@ function Assert-StringArray {
 
 function Assert-UniqueJsonKeys {
     param([string]$Json)
-    # ConvertFrom-Json can overwrite identical property names. Inspect JSON tokens
-    # as well, keeping a separate case-insensitive key set for each object.
+    # ConvertFrom-Json can hide duplicate keys, so check the original JSON too.
     $tokens = [regex]::Matches($Json, '"(?:\\.|[^"\\])*"|[{}\[\]:]')
     $scopes = New-Object System.Collections.Stack
     for ($i = 0; $i -lt $tokens.Count; $i++) {
@@ -102,15 +101,14 @@ function Read-AccessRules {
 
 function Read-CsvRows {
     param([string]$Text)
-    # A small CSV state machine preserves empty records, quoted commas, escaped
-    # quotes, and embedded newlines. Splitting on lines or commas would lose them.
+    # Keep blank records and quoted fields, including commas and embedded newlines.
     $fields = New-Object 'System.Collections.Generic.List[string]'
     $value = New-Object System.Text.StringBuilder
     $state = 'Start'
-    $pending = $false
+    $recordStarted = $false
     for ($i = 0; $i -lt $Text.Length; $i++) {
         $character = $Text[$i]
-        $pending = $true
+        $recordStarted = $true
         if ($state -eq 'Quoted') {
             if ($character -eq '"') {
                 if ($i + 1 -lt $Text.Length -and $Text[$i + 1] -eq '"') {
@@ -126,7 +124,7 @@ function Read-CsvRows {
             if ($character -ne ',') {
                 [pscustomobject]@{ Fields = $fields.ToArray() }
                 $fields.Clear()
-                $pending = $false
+                $recordStarted = $false
                 if ($character -eq "`r" -and $i + 1 -lt $Text.Length -and $Text[$i + 1] -eq "`n") { $i++ }
             }
             continue
@@ -141,7 +139,7 @@ function Read-CsvRows {
         }
     }
     if ($state -eq 'Quoted') { throw 'Malformed CSV: unclosed quoted field.' }
-    if ($pending) {
+    if ($recordStarted) {
         $fields.Add($value.ToString())
         [pscustomobject]@{ Fields = $fields.ToArray() }
     }
@@ -185,6 +183,7 @@ function Read-OnboardingCsv {
 
 function Get-DuplicateValues {
     param([object[]]$Records, [string]$Field)
+    # Count the whole feed, including invalid records; neither duplicate is a winner.
     $counts = @{}
     foreach ($record in $Records) {
         $value = $record.$Field
@@ -204,14 +203,14 @@ function Test-EmployeeRecord {
         if ([string]::IsNullOrWhiteSpace($Record.$field)) { "Missing required field: $field" }
     }
     if ($Record.Department) {
-        $canonical = @($Rules.AllowedDepartments | Where-Object { $_ -eq $Record.Department })
-        if ($canonical.Count -eq 0) { "Unknown department: $($Record.Department)" }
-        else { $Record.Department = $canonical[0] }
+        $departmentMatch = @($Rules.AllowedDepartments | Where-Object { $_ -eq $Record.Department })
+        if ($departmentMatch.Count -eq 0) { "Unknown department: $($Record.Department)" }
+        else { $Record.Department = $departmentMatch[0] }
     }
     if ($Record.EmploymentType) {
-        $canonical = @($Rules.AllowedEmploymentTypes | Where-Object { $_ -eq $Record.EmploymentType })
-        if ($canonical.Count -eq 0) { "Unsupported employment type: $($Record.EmploymentType)" }
-        else { $Record.EmploymentType = $canonical[0] }
+        $employmentTypeMatch = @($Rules.AllowedEmploymentTypes | Where-Object { $_ -eq $Record.EmploymentType })
+        if ($employmentTypeMatch.Count -eq 0) { "Unsupported employment type: $($Record.EmploymentType)" }
+        else { $Record.EmploymentType = $employmentTypeMatch[0] }
     }
     if ($Record.Email -and $Record.Email -notmatch '^[^\s@]+@[^\s@]+\.[^\s@]+$') { 'Invalid email address' }
     $date = [datetime]::MinValue
@@ -225,26 +224,26 @@ function Test-EmployeeRecord {
 
 function Get-AccessAssignment {
     param($Record, $Rules)
-    $department = $Rules.DepartmentRules.PSObject.Properties[$Record.Department]
-    if ($null -eq $department) {
+    $departmentRule = $Rules.DepartmentRules.PSObject.Properties[$Record.Department]
+    if ($null -eq $departmentRule) {
         return [pscustomobject]@{ Reason = "Missing access rule for department: $($Record.Department)"; Groups = @(); AppliedRules = @() }
     }
-    $applied = @(
+    $appliedRules = @(
         [pscustomobject]@{ RuleType = 'Base'; RuleKey = 'BaseGroups'; Groups = @($Rules.BaseGroups) }
-        [pscustomobject]@{ RuleType = 'Department'; RuleKey = $Record.Department; Groups = @($department.Value) }
+        [pscustomobject]@{ RuleType = 'Department'; RuleKey = $Record.Department; Groups = @($departmentRule.Value) }
     )
     foreach ($rule in $Rules.JobTitleRules) {
         if ($rule.Department -eq $Record.Department -and $rule.JobTitle -eq $Record.JobTitle) {
-            $applied += [pscustomobject]@{ RuleType = 'JobTitle'; RuleKey = "$($Record.Department)/$($rule.JobTitle)"; Groups = @($rule.Groups) }
+            $appliedRules += [pscustomobject]@{ RuleType = 'JobTitle'; RuleKey = "$($Record.Department)/$($rule.JobTitle)"; Groups = @($rule.Groups) }
         }
     }
     $seen = @{}
-    $groups = @(foreach ($rule in $applied) {
+    $groups = @(foreach ($rule in $appliedRules) {
         foreach ($group in $rule.Groups) {
             if (-not $seen.ContainsKey($group)) { $group; $seen[$group] = $true }
         }
     })
-    [pscustomobject]@{ Reason = ''; Groups = $groups; AppliedRules = $applied }
+    [pscustomobject]@{ Reason = ''; Groups = $groups; AppliedRules = $appliedRules }
 }
 
 function New-ProcessingResult {

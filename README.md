@@ -1,131 +1,73 @@
 # Employee Onboarding & Access Automation
 
-## Overview
+I built this project to practice PowerShell with a common HR-to-IT workflow: checking new-hire records and working out which access each person would need. It gave me practice with CSV and JSON, validation, exception handling, and access rules.
 
-I built a PowerShell workflow that simulates an HR-to-IT employee onboarding process. It reads employee intake data, validates each record, applies department and job-title access rules, and flags exceptions. It then creates a provisioning plan, an audit log, and an HTML summary.
+Everything is fictional. The script creates a simulated provisioning plan; it does not create accounts or connect to Active Directory, Microsoft Entra ID, or any other service.
 
-All employees, groups, and access assignments are fictional. The script does not connect to Active Directory, Microsoft Entra ID, or any production system.
+## How it works
 
-## Why I Built It
+HR intake CSV → validation → access rules → provisioning plan, audit log, and HTML summary
 
-I wanted hands-on practice with PowerShell, process automation, input validation, exception handling, access-control logic, and structured logging using a common IT workflow.
+The script checks the file and configuration first, then processes each employee independently. Valid records become `Ready for Provisioning`. Invalid records become `Exception`, with specific reasons and no assigned groups. A failed record does not stop later records.
 
-## How It Works
+The [CSV](data/new_hires.csv) includes the kinds of formatting differences that can show up in an HR export: extra spaces, mixed department casing, and employment types such as `contract` and `part-time`. I added these after the first version to check the normalization with the supplied data, alongside the missing fields, malformed email, invalid date, and duplicate records already present.
 
-HR intake CSV → validation → access-rule lookup → provisioning plan → audit log → HTML summary
+## Validation and access rules
 
-Valid records receive a proposed access assignment and the status `Ready for Provisioning`. Invalid records are logged as `Exception` with a reason while the rest of the batch continues.
+- Trim field values and treat whitespace-only fields as missing.
+- Check required columns and fields, allowed departments and employment types, email format, and valid `yyyy-MM-dd` dates.
+- Compare IDs, emails, departments, employment types, and titles without regard to case. Normalize recognized departments and employment types to the configuration's spelling.
+- Flag every record sharing an ID or email, including the first occurrence and otherwise invalid records.
 
-## Project Structure
+Access comes from [config/access_rules.json](config/access_rules.json): standard groups, department groups, then any matching department-and-title additions. Duplicate groups are removed while preserving that order. An unmatched title gets standard and department access; IT employment never implies administrator access.
 
-```text
-employee-onboarding-powershell/
-├── .gitignore
-├── README.md
-├── config/
-│   └── access_rules.json
-├── data/
-│   └── new_hires.csv
-├── docs/
-│   ├── ProjectRequirements.md
-│   ├── TestCases.md
-│   └── ProcessFlow.md
-├── scripts/
-│   └── Invoke-EmployeeOnboarding.ps1
-├── screenshots/
-│   ├── onboarding-summary.png
-│   └── onboarding-exceptions.png
-└── output/
-    ├── ProvisioningPlan.csv
-    ├── AuditLog.json
-    └── OnboardingSummary.html
-```
+Input or configuration errors leave previous reports untouched. Reports are serialized before replacement; an output failure warns that the files may be stale or incomplete. The exact validation order, configuration schema, and report fields are in [ProjectRequirements.md](docs/ProjectRequirements.md).
 
-## Validation
+## Run it
 
-The script checks required fields, allowed departments, supported employment types, email format, duplicate email addresses and employee IDs, and valid start dates in `yyyy-MM-dd` format. It also validates CSV headers and structure and the access-rule configuration.
-
-Values are trimmed before validation. Every record sharing a duplicate ID or email becomes an exception, including the first occurrence. Exceptions receive no access groups.
-
-## Access Rules
-
-Assignments come from [config/access_rules.json](config/access_rules.json). Valid employees receive standard access, department access, and job-title access where a rule matches both the department and title.
-
-For example, an IT Support Analyst receives the standard package, IT department groups, and `ServiceDesk-Analysts`. IT employment does not grant administrator access. These are proposed assignments; no accounts or groups are created.
-
-## Error Handling
-
-Records are processed independently with `try/catch`. A bad record becomes an `Exception` with a specific reason and does not stop later records. Unexpected record errors are logged as `Processing error` with no access assigned.
-
-Input or configuration errors stop the run and leave earlier reports unchanged. Reports are written to temporary files before replacement. An output error warns that reports may be stale or incomplete.
-
-## Example Results
-
-The supplied dataset produced these verified results:
-
-| Result | Count |
-| --- | ---: |
-| Records processed | 40 |
-| Ready for Provisioning | 30 |
-| Exceptions | 10 |
-| Exception rate | 25% |
-
-The dataset intentionally includes invalid records to test exception handling. The exception rate describes this test file, not business performance.
-
-## Sample Report
-
-The [HTML summary](output/OnboardingSummary.html) contains batch totals, proposed groups, and exception reasons. Download it and open it in a browser to view the report. The [provisioning plan](output/ProvisioningPlan.csv) and [audit log](output/AuditLog.json) contain the same 40 results in CSV and JSON form.
-
-The audit log includes UTC timestamps, a run ID, the rules applied, and the configuration version and hash.
-
-![Employee Onboarding Summary showing 40 records, 30 ready, and 10 exceptions](screenshots/onboarding-summary.png)
-
-![Exception rows with specific validation reasons](screenshots/onboarding-exceptions.png)
-
-These screenshots show an earlier completed run of the same dataset. Run IDs and timestamps change each time the script runs.
-
-## Running the Project
-
-Use PowerShell 7 from the repository root:
+From the repository root, using PowerShell 7:
 
 ```powershell
 pwsh -NoProfile -File .\scripts\Invoke-EmployeeOnboarding.ps1 -CsvPath .\data\new_hires.csv
 ```
 
-The script creates `output/` if needed and writes all three reports there. Relative CSV paths resolve from your current working directory; configuration and output paths resolve from the repository.
+No administrator rights or extra modules are needed. The script does not change execution policy. A relative CSV path starts from your current directory; configuration and report paths start from the repository.
 
-Exit code `2` means the batch completed with exceptions, which is expected for the supplied dataset. Exit code `0` means all records are ready, and `1` means an input, configuration, or output failure.
+Reports go into `output/`, which is created if needed:
 
-No administrator rights, external modules, or service connections are required. The script does not change execution policy.
+| File | Contents |
+| --- | --- |
+| [ProvisioningPlan.csv](output/ProvisioningPlan.csv) | Proposed groups, status, and reasons for every record |
+| [AuditLog.json](output/AuditLog.json) | The same results, applied rules, UTC timestamps, run ID, and configuration hash |
+| [OnboardingSummary.html](output/OnboardingSummary.html) | Batch totals and a readable employee table; download and open in a browser |
 
-## Testing
+Exit codes: `0` means all records are ready, `2` means the batch completed with exceptions, and `1` means a file, configuration, or output failure. The supplied data intentionally returns `2`.
 
-The completed checks are documented in [docs/TestCases.md](docs/TestCases.md):
+## Results and testing
 
-- All 40 records were processed: 30 valid and 10 exceptions, with the documented reasons matching exactly.
-- Duplicate detection flagged both members of each pair, including case and whitespace variations.
-- An injected processing error did not stop later records.
-- JSON parsed successfully, and the CSV was re-imported with 40 rows and the expected headers.
-- Repeated runs replaced the reports without manual cleanup. Relative paths and missing output directory creation also passed.
-- PowerShell 7.6.5 direct execution passed. Validation and failure tests also passed in Windows PowerShell 5.1.
+The revised feed produced **40 records: 30 ready and 10 exceptions (25%)**. The counts stayed the same because the added spaces and casing differences are handled by normalization. The exception rate describes this test dataset, not a business outcome.
 
-HTML totals, row contents, and escaping were checked. Screenshots of the rendered report were visually reviewed, including the summary, successful records, and all ten exception rows.
+Regression checks covered the documented exception reasons, normalization, duplicate pairs, access assignments, missing configuration rules, and an injected record failure. JSON parsing, CSV re-import, HTML contents and escaping, output failures, path handling, and repeated runs also passed. Tests ran in Windows PowerShell 5.1 and PowerShell 7.6.5; PowerShell 7 direct execution passed.
 
-## Skills Practiced
+[TestCases.md](docs/TestCases.md) records the scenarios, expected reasons, and results, including the formatting changes in the supplied feed.
 
-PowerShell, CSV processing, JSON, input validation, error handling, role-based access concepts, structured logging, process automation, Git, and GitHub.
+## Sample report
 
-## Limitations
+![Employee Onboarding Summary showing 40 records, 30 ready, and 10 exceptions](screenshots/onboarding-summary.png)
 
-- This is a local simulation. No real Active Directory or Entra accounts are created, and all access groups are fictional.
-- Duplicate checks apply only to the current batch.
-- Output files are replaced on each completed run. There is no historical audit store.
-- Manager identity, email ownership, and actual access are not verified.
-- Titles without a matching rule receive only standard and department access.
+![Exception rows with specific validation reasons](screenshots/onboarding-exceptions.png)
 
-## Future Improvements
+These screenshots are from an earlier run. The current feed produces the same displayed names, departments, titles, groups, and exceptions after normalization; run IDs and timestamps change on each run.
 
-- Add an approval step with Power Automate.
-- Replace CSV intake with a Power Apps or SharePoint form.
-- Keep historical run logs for comparison and reporting.
-- Explore provisioning separately in a controlled Active Directory or Microsoft Entra lab.
+## Files
+
+- [scripts/Invoke-EmployeeOnboarding.ps1](scripts/Invoke-EmployeeOnboarding.ps1) — the workflow
+- [data/new_hires.csv](data/new_hires.csv) and [config/access_rules.json](config/access_rules.json) — fictional intake and access policy
+- [docs/ProjectRequirements.md](docs/ProjectRequirements.md) and [docs/TestCases.md](docs/TestCases.md) — detailed rules and validation evidence
+- `output/` and `screenshots/` — generated reports and report screenshots
+
+## Limitations and next steps
+
+This is a local simulation with fictional groups. Duplicate checks cover only the current batch. Manager identity, email ownership, and actual access are not verified. Reports replace the previous run; they are not a historical or tamper-proof audit store.
+
+Next, I'd add dated run folders so earlier results are retained, then explore an approval step. Any future Active Directory or Microsoft Entra integration would be a separate, controlled lab exercise.
