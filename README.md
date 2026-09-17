@@ -32,6 +32,9 @@ employee-onboarding-powershell/
 │   └── ProcessFlow.md
 ├── scripts/
 │   └── Invoke-EmployeeOnboarding.ps1
+├── screenshots/
+│   ├── onboarding-summary.png
+│   └── onboarding-exceptions.png
 └── output/
     ├── ProvisioningPlan.csv
     ├── AuditLog.json
@@ -75,6 +78,12 @@ The [HTML summary](output/OnboardingSummary.html) contains batch totals, propose
 
 The audit log includes UTC timestamps, a run ID, the rules applied, and the configuration version and hash.
 
+![Employee Onboarding Summary showing 40 records, 30 ready, and 10 exceptions](screenshots/onboarding-summary.png)
+
+![Exception rows with specific validation reasons](screenshots/onboarding-exceptions.png)
+
+These screenshots show an earlier completed run of the same dataset. Run IDs and timestamps change each time the script runs.
+
 ## Running the Project
 
 Use PowerShell 7 from the repository root:
@@ -100,7 +109,7 @@ The completed checks are documented in [docs/TestCases.md](docs/TestCases.md):
 - Repeated runs replaced the reports without manual cleanup. Relative paths and missing output directory creation also passed.
 - PowerShell 7.6.5 direct execution passed. Validation and failure tests also passed in Windows PowerShell 5.1.
 
-HTML totals, row contents, and escaping were checked. Manual visual review in a browser is still pending.
+HTML totals, row contents, and escaping were checked. Screenshots of the rendered report were visually reviewed, including the summary, successful records, and all ten exception rows.
 
 ## Skills Practiced
 

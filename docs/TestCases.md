@@ -6,7 +6,7 @@ These acceptance tests cover the completed script. SourceRow counts employee rec
 
 Testing on September 17, 2026 (UTC) confirmed 40 processed records, 30 Ready for Provisioning, 10 Exceptions, and exit code 2. All exception reasons below matched, including both members of duplicate pairs. TC01-TC16 passed in Windows PowerShell 5.1.26100.9444. Direct execution also passed in PowerShell 7.6.5.
 
-TC17 passed for repeat runs, path handling, output directory creation, JSON parsing, CSV re-import, spreadsheet formula protection, and HTML totals and escaping. Manual visual review of the HTML in a browser remains pending.
+TC17 passed for repeat runs, path handling, output directory creation, JSON parsing, CSV re-import, spreadsheet formula protection, and HTML totals and escaping. Screenshots of the rendered report were also visually reviewed: the summary, successful records, and all ten exception rows were readable and matched the expected results.
 
 Additional checks passed for blank records, reordered and extra headers, zero- and one-element JSON arrays, case-insensitive group deduplication, malformed configuration, and output replacement failures. The injected row 2 error in TC13 produced 29 ready records and 11 exceptions; the remaining records still processed.
 
