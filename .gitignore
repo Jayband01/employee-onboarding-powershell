@@ -1,0 +1,23 @@
+# Windows and editor files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files and local test runs
+*.tmp
+*.temp
+*.bak
+*.ps1.bak
+*.ps1~
+*.log
+TestResults/
+.test-output/
+work/
+__pycache__/
+*.py[cod]
+.pytest_cache/

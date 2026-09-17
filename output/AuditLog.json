@@ -1,0 +1,1454 @@
+[
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1655916Z",
+    "SourceRow": 1,
+    "EmployeeID": "E1041",
+    "EmployeeName": "Amara Wallace",
+    "Email": "amara.wallace@example.com",
+    "Department": "Finance",
+    "JobTitle": "Financial Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Finance-Users",
+      "Finance-Shared",
+      "ERP-Finance-Read",
+      "Financial-Reporting"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Finance",
+        "Groups": [
+          "Finance-Users",
+          "Finance-Shared",
+          "ERP-Finance-Read"
+        ]
+      },
+      {
+        "RuleType": "JobTitle",
+        "RuleKey": "Finance/Financial Analyst",
+        "Groups": [
+          "Financial-Reporting"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1739340Z",
+    "SourceRow": 2,
+    "EmployeeID": "E1042",
+    "EmployeeName": "Ethan Navarro",
+    "Email": "ethan.navarro@example.com",
+    "Department": "Information Technology",
+    "JobTitle": "IT Support Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "IT-Users",
+      "ServiceDesk-Portal",
+      "IT-KnowledgeBase",
+      "ServiceDesk-Analysts"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Information Technology",
+        "Groups": [
+          "IT-Users",
+          "ServiceDesk-Portal",
+          "IT-KnowledgeBase"
+        ]
+      },
+      {
+        "RuleType": "JobTitle",
+        "RuleKey": "Information Technology/IT Support Analyst",
+        "Groups": [
+          "ServiceDesk-Analysts"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1757552Z",
+    "SourceRow": 3,
+    "EmployeeID": "E1043",
+    "EmployeeName": "Camille Nguyen",
+    "Email": "camille.nguyen@example.com",
+    "Department": "Human Resources",
+    "JobTitle": "HR Coordinator",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "HR-Users",
+      "HR-Shared",
+      "HRIS-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Human Resources",
+        "Groups": [
+          "HR-Users",
+          "HR-Shared",
+          "HRIS-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1772487Z",
+    "SourceRow": 4,
+    "EmployeeID": "E1044",
+    "EmployeeName": "Darius Reed",
+    "Email": "darius.reed@example.com",
+    "Department": "Operations",
+    "JobTitle": "Operations Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Operations-Users",
+      "Operations-Shared"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Operations",
+        "Groups": [
+          "Operations-Users",
+          "Operations-Shared"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1787345Z",
+    "SourceRow": 5,
+    "EmployeeID": "E1045",
+    "EmployeeName": "Isabel Moreno",
+    "Email": "isabel.moreno@example.com",
+    "Department": "Facilities",
+    "JobTitle": "Facilities Coordinator",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Facilities-Users",
+      "Facilities-Requests"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Facilities",
+        "Groups": [
+          "Facilities-Users",
+          "Facilities-Requests"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1802013Z",
+    "SourceRow": 6,
+    "EmployeeID": "E1046",
+    "EmployeeName": "Caleb Whitaker",
+    "Email": "caleb.whitaker@example.com",
+    "Department": "Procurement",
+    "JobTitle": "Procurement Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Procurement-Users",
+      "Vendor-Management-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Procurement",
+        "Groups": [
+          "Procurement-Users",
+          "Vendor-Management-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1817280Z",
+    "SourceRow": 7,
+    "EmployeeID": "E1047",
+    "EmployeeName": "Nina Desai",
+    "Email": "nina.desai@example.com",
+    "Department": "Data Analytics",
+    "JobTitle": "Data Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Analytics-Users",
+      "Reporting-Workspace",
+      "BI-Reporting"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Data Analytics",
+        "Groups": [
+          "Analytics-Users",
+          "Reporting-Workspace"
+        ]
+      },
+      {
+        "RuleType": "JobTitle",
+        "RuleKey": "Data Analytics/Data Analyst",
+        "Groups": [
+          "BI-Reporting"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1830225Z",
+    "SourceRow": 8,
+    "EmployeeID": "E1048",
+    "EmployeeName": "Owen Fletcher",
+    "Email": "owen.fletcher@example.com",
+    "Department": "Finance",
+    "JobTitle": "Accounts Payable Specialist",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Finance-Users",
+      "Finance-Shared",
+      "ERP-Finance-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Finance",
+        "Groups": [
+          "Finance-Users",
+          "Finance-Shared",
+          "ERP-Finance-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1840598Z",
+    "SourceRow": 9,
+    "EmployeeID": "E1049",
+    "EmployeeName": "Tessa Morgan",
+    "Email": "tessa.morgan@example.com",
+    "Department": "Information Technology",
+    "JobTitle": "Systems Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "IT-Users",
+      "ServiceDesk-Portal",
+      "IT-KnowledgeBase"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Information Technology",
+        "Groups": [
+          "IT-Users",
+          "ServiceDesk-Portal",
+          "IT-KnowledgeBase"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1850353Z",
+    "SourceRow": 10,
+    "EmployeeID": "E1050",
+    "EmployeeName": "Malik Hayes",
+    "Email": "malik.hayes@example.com",
+    "Department": "Human Resources",
+    "JobTitle": "Recruiting Specialist",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "HR-Users",
+      "HR-Shared",
+      "HRIS-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Human Resources",
+        "Groups": [
+          "HR-Users",
+          "HR-Shared",
+          "HRIS-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1861197Z",
+    "SourceRow": 11,
+    "EmployeeID": "E1051",
+    "EmployeeName": "Vivian Park",
+    "Email": "vivian.park@example.com",
+    "Department": "Operations",
+    "JobTitle": "Service Coordinator",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Operations-Users",
+      "Operations-Shared"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Operations",
+        "Groups": [
+          "Operations-Users",
+          "Operations-Shared"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1875243Z",
+    "SourceRow": 12,
+    "EmployeeID": "E1052",
+    "EmployeeName": "Adrian Castillo",
+    "Email": "adrian.castillo@example.com",
+    "Department": "Facilities",
+    "JobTitle": "Maintenance Planner",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Facilities-Users",
+      "Facilities-Requests"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Facilities",
+        "Groups": [
+          "Facilities-Users",
+          "Facilities-Requests"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1921410Z",
+    "SourceRow": 13,
+    "EmployeeID": "E1053",
+    "EmployeeName": "Leah Rosen",
+    "Email": "leah.rosen@example.com",
+    "Department": "Procurement",
+    "JobTitle": "Purchasing Coordinator",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Procurement-Users",
+      "Vendor-Management-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Procurement",
+        "Groups": [
+          "Procurement-Users",
+          "Vendor-Management-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1931256Z",
+    "SourceRow": 14,
+    "EmployeeID": "E1054",
+    "EmployeeName": "Devin Crawford",
+    "Email": "devin.crawford@example.com",
+    "Department": "Data Analytics",
+    "JobTitle": "Reporting Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Analytics-Users",
+      "Reporting-Workspace"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Data Analytics",
+        "Groups": [
+          "Analytics-Users",
+          "Reporting-Workspace"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1943700Z",
+    "SourceRow": 15,
+    "EmployeeID": "E1055",
+    "EmployeeName": "Anika Mehta",
+    "Email": "anika.mehta@example.com",
+    "Department": "Finance",
+    "JobTitle": "Financial Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Finance-Users",
+      "Finance-Shared",
+      "ERP-Finance-Read",
+      "Financial-Reporting"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Finance",
+        "Groups": [
+          "Finance-Users",
+          "Finance-Shared",
+          "ERP-Finance-Read"
+        ]
+      },
+      {
+        "RuleType": "JobTitle",
+        "RuleKey": "Finance/Financial Analyst",
+        "Groups": [
+          "Financial-Reporting"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1953261Z",
+    "SourceRow": 16,
+    "EmployeeID": "E1056",
+    "EmployeeName": "Wesley Grant",
+    "Email": "wesley.grant@example.com",
+    "Department": "Information Technology",
+    "JobTitle": "IT Support Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "IT-Users",
+      "ServiceDesk-Portal",
+      "IT-KnowledgeBase",
+      "ServiceDesk-Analysts"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Information Technology",
+        "Groups": [
+          "IT-Users",
+          "ServiceDesk-Portal",
+          "IT-KnowledgeBase"
+        ]
+      },
+      {
+        "RuleType": "JobTitle",
+        "RuleKey": "Information Technology/IT Support Analyst",
+        "Groups": [
+          "ServiceDesk-Analysts"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1963211Z",
+    "SourceRow": 17,
+    "EmployeeID": "E1057",
+    "EmployeeName": "Lucia Romero",
+    "Email": "lucia.romero@example.com",
+    "Department": "Human Resources",
+    "JobTitle": "HR Coordinator",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "HR-Users",
+      "HR-Shared",
+      "HRIS-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Human Resources",
+        "Groups": [
+          "HR-Users",
+          "HR-Shared",
+          "HRIS-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1973722Z",
+    "SourceRow": 18,
+    "EmployeeID": "E1058",
+    "EmployeeName": "Miles Duncan",
+    "Email": "miles.duncan@example.com",
+    "Department": "Operations",
+    "JobTitle": "Operations Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Operations-Users",
+      "Operations-Shared"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Operations",
+        "Groups": [
+          "Operations-Users",
+          "Operations-Shared"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1983637Z",
+    "SourceRow": 19,
+    "EmployeeID": "E1059",
+    "EmployeeName": "Naomi Okafor",
+    "Email": "naomi.okafor@example.com",
+    "Department": "Facilities",
+    "JobTitle": "Facilities Coordinator",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Facilities-Users",
+      "Facilities-Requests"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Facilities",
+        "Groups": [
+          "Facilities-Users",
+          "Facilities-Requests"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.1993616Z",
+    "SourceRow": 20,
+    "EmployeeID": "E1060",
+    "EmployeeName": "Julian Vega",
+    "Email": "julian.vega@example.com",
+    "Department": "Procurement",
+    "JobTitle": "Procurement Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Procurement-Users",
+      "Vendor-Management-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Procurement",
+        "Groups": [
+          "Procurement-Users",
+          "Vendor-Management-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2003180Z",
+    "SourceRow": 21,
+    "EmployeeID": "E1061",
+    "EmployeeName": "Brianna Ellis",
+    "Email": "brianna.ellis@example.com",
+    "Department": "Data Analytics",
+    "JobTitle": "Data Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Analytics-Users",
+      "Reporting-Workspace",
+      "BI-Reporting"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Data Analytics",
+        "Groups": [
+          "Analytics-Users",
+          "Reporting-Workspace"
+        ]
+      },
+      {
+        "RuleType": "JobTitle",
+        "RuleKey": "Data Analytics/Data Analyst",
+        "Groups": [
+          "BI-Reporting"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2012602Z",
+    "SourceRow": 22,
+    "EmployeeID": "E1062",
+    "EmployeeName": "Felix Huang",
+    "Email": "felix.huang@example.com",
+    "Department": "Finance",
+    "JobTitle": "Accounts Payable Specialist",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Finance-Users",
+      "Finance-Shared",
+      "ERP-Finance-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Finance",
+        "Groups": [
+          "Finance-Users",
+          "Finance-Shared",
+          "ERP-Finance-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2025309Z",
+    "SourceRow": 23,
+    "EmployeeID": "E1063",
+    "EmployeeName": "Simone Baxter",
+    "Email": "simone.baxter@example.com",
+    "Department": "Information Technology",
+    "JobTitle": "Systems Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "IT-Users",
+      "ServiceDesk-Portal",
+      "IT-KnowledgeBase"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Information Technology",
+        "Groups": [
+          "IT-Users",
+          "ServiceDesk-Portal",
+          "IT-KnowledgeBase"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2044167Z",
+    "SourceRow": 24,
+    "EmployeeID": "E1064",
+    "EmployeeName": "Cole Sullivan",
+    "Email": "cole.sullivan@example.com",
+    "Department": "Human Resources",
+    "JobTitle": "Recruiting Specialist",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "HR-Users",
+      "HR-Shared",
+      "HRIS-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Human Resources",
+        "Groups": [
+          "HR-Users",
+          "HR-Shared",
+          "HRIS-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2059527Z",
+    "SourceRow": 25,
+    "EmployeeID": "E1065",
+    "EmployeeName": "Aisha Rahman",
+    "Email": "aisha.rahman@example.com",
+    "Department": "Operations",
+    "JobTitle": "Service Coordinator",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Operations-Users",
+      "Operations-Shared"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Operations",
+        "Groups": [
+          "Operations-Users",
+          "Operations-Shared"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2073035Z",
+    "SourceRow": 26,
+    "EmployeeID": "E1066",
+    "EmployeeName": "Graham Pierce",
+    "Email": "graham.pierce@example.com",
+    "Department": "Facilities",
+    "JobTitle": "Maintenance Planner",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Facilities-Users",
+      "Facilities-Requests"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Facilities",
+        "Groups": [
+          "Facilities-Users",
+          "Facilities-Requests"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2086663Z",
+    "SourceRow": 27,
+    "EmployeeID": "E1067",
+    "EmployeeName": "Celia Vasquez",
+    "Email": "celia.vasquez@example.com",
+    "Department": "Procurement",
+    "JobTitle": "Purchasing Coordinator",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Procurement-Users",
+      "Vendor-Management-Read"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Procurement",
+        "Groups": [
+          "Procurement-Users",
+          "Vendor-Management-Read"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2100215Z",
+    "SourceRow": 28,
+    "EmployeeID": "E1068",
+    "EmployeeName": "Isaac Monroe",
+    "Email": "isaac.monroe@example.com",
+    "Department": "Data Analytics",
+    "JobTitle": "Reporting Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Analytics-Users",
+      "Reporting-Workspace"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Data Analytics",
+        "Groups": [
+          "Analytics-Users",
+          "Reporting-Workspace"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2112867Z",
+    "SourceRow": 29,
+    "EmployeeID": "E1069",
+    "EmployeeName": "Renee Lawson",
+    "Email": "renee.lawson@example.com",
+    "Department": "Finance",
+    "JobTitle": "Financial Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "Finance-Users",
+      "Finance-Shared",
+      "ERP-Finance-Read",
+      "Financial-Reporting"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Finance",
+        "Groups": [
+          "Finance-Users",
+          "Finance-Shared",
+          "ERP-Finance-Read"
+        ]
+      },
+      {
+        "RuleType": "JobTitle",
+        "RuleKey": "Finance/Financial Analyst",
+        "Groups": [
+          "Financial-Reporting"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2123178Z",
+    "SourceRow": 30,
+    "EmployeeID": "E1070",
+    "EmployeeName": "Tristan Cho",
+    "Email": "tristan.cho@example.com",
+    "Department": "Information Technology",
+    "JobTitle": "IT Support Analyst",
+    "Status": "Ready for Provisioning",
+    "AssignedGroups": [
+      "Standard-Users",
+      "Employee-Portal",
+      "Microsoft-365-Standard",
+      "IT-Users",
+      "ServiceDesk-Portal",
+      "IT-KnowledgeBase",
+      "ServiceDesk-Analysts"
+    ],
+    "ExceptionReason": "",
+    "AppliedRules": [
+      {
+        "RuleType": "Base",
+        "RuleKey": "BaseGroups",
+        "Groups": [
+          "Standard-Users",
+          "Employee-Portal",
+          "Microsoft-365-Standard"
+        ]
+      },
+      {
+        "RuleType": "Department",
+        "RuleKey": "Information Technology",
+        "Groups": [
+          "IT-Users",
+          "ServiceDesk-Portal",
+          "IT-KnowledgeBase"
+        ]
+      },
+      {
+        "RuleType": "JobTitle",
+        "RuleKey": "Information Technology/IT Support Analyst",
+        "Groups": [
+          "ServiceDesk-Analysts"
+        ]
+      }
+    ],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2130952Z",
+    "SourceRow": 31,
+    "EmployeeID": "E1071",
+    "EmployeeName": "Avery Spencer",
+    "Email": "",
+    "Department": "Human Resources",
+    "JobTitle": "HR Coordinator",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Missing required field: Email",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2139104Z",
+    "SourceRow": 32,
+    "EmployeeID": "E1072",
+    "EmployeeName": "Nolan Rhodes",
+    "Email": "nolan.rhodes@example.com",
+    "Department": "Operations",
+    "JobTitle": "Operations Analyst",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Missing required field: Manager",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2148066Z",
+    "SourceRow": 33,
+    "EmployeeID": "E1073",
+    "EmployeeName": "Kiara Sutton",
+    "Email": "kiara.sutton@example.com",
+    "Department": "Facilities",
+    "JobTitle": "",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Missing required field: JobTitle",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2158375Z",
+    "SourceRow": 34,
+    "EmployeeID": "E1074",
+    "EmployeeName": "Elise Abbott",
+    "Email": "elise.abbott@example.com",
+    "Department": "Marketing",
+    "JobTitle": "Procurement Analyst",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Unknown department: Marketing",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2167924Z",
+    "SourceRow": 35,
+    "EmployeeID": "E1075",
+    "EmployeeName": "Mateo Delgado",
+    "Email": "mateo.delgado@example.com",
+    "Department": "Data Analytics",
+    "JobTitle": "Data Analyst",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Duplicate email address",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2177997Z",
+    "SourceRow": 36,
+    "EmployeeID": "E1076",
+    "EmployeeName": "Paige Henson",
+    "Email": "mateo.delgado@example.com",
+    "Department": "Finance",
+    "JobTitle": "Accounts Payable Specialist",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Duplicate email address",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2187687Z",
+    "SourceRow": 37,
+    "EmployeeID": "",
+    "EmployeeName": "Roman Blake",
+    "Email": "roman.blake@example.com",
+    "Department": "Information Technology",
+    "JobTitle": "Systems Analyst",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Missing required field: EmployeeID; Missing required field: StartDate",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2199285Z",
+    "SourceRow": 38,
+    "EmployeeID": "E1078",
+    "EmployeeName": "Jasmine Holt",
+    "Email": "jasmine.holt.example.com",
+    "Department": "Human Resources",
+    "JobTitle": "Recruiting Specialist",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Invalid email address",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2209527Z",
+    "SourceRow": 39,
+    "EmployeeID": "E1079",
+    "EmployeeName": "Walsh",
+    "Email": "theo.walsh@example.com",
+    "Department": "Operations",
+    "JobTitle": "Service Coordinator",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Missing required field: FirstName; Unsupported employment type: Temporary; Duplicate EmployeeID",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  },
+  {
+    "RunId": "e12e8d62-a5a6-411b-a26a-6ea1369952cb",
+    "Timestamp": "2026-09-17T03:50:44.2240227Z",
+    "SourceRow": 40,
+    "EmployeeID": "E1079",
+    "EmployeeName": "Sabrina Costa",
+    "Email": "sabrina.costa@example.com",
+    "Department": "Facilities",
+    "JobTitle": "Maintenance Planner",
+    "Status": "Exception",
+    "AssignedGroups": [],
+    "ExceptionReason": "Invalid start date; Duplicate EmployeeID",
+    "AppliedRules": [],
+    "RuleSetVersion": "1.0",
+    "ConfigSha256": "01e5f73df3a91c0ee3f09b2f627db5cd9dc9bc44ab6e742819d01fe834f7241f"
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "SchemaVersion": 1,
+  "RuleSetVersion": "1.0",
+  "AllowedDepartments": [
+    "Finance",
+    "Information Technology",
+    "Human Resources",
+    "Operations",
+    "Facilities",
+    "Procurement",
+    "Data Analytics"
+  ],
+  "AllowedEmploymentTypes": [
+    "Full-Time",
+    "Part-Time",
+    "Contract"
+  ],
+  "BaseGroups": [
+    "Standard-Users",
+    "Employee-Portal",
+    "Microsoft-365-Standard"
+  ],
+  "DepartmentRules": {
+    "Finance": [
+      "Finance-Users",
+      "Finance-Shared",
+      "ERP-Finance-Read"
+    ],
+    "Information Technology": [
+      "IT-Users",
+      "ServiceDesk-Portal",
+      "IT-KnowledgeBase"
+    ],
+    "Human Resources": [
+      "HR-Users",
+      "HR-Shared",
+      "HRIS-Read"
+    ],
+    "Operations": [
+      "Operations-Users",
+      "Operations-Shared"
+    ],
+    "Facilities": [
+      "Facilities-Users",
+      "Facilities-Requests"
+    ],
+    "Procurement": [
+      "Procurement-Users",
+      "Vendor-Management-Read"
+    ],
+    "Data Analytics": [
+      "Analytics-Users",
+      "Reporting-Workspace"
+    ]
+  },
+  "JobTitleRules": [
+    {
+      "Department": "Information Technology",
+      "JobTitle": "IT Support Analyst",
+      "Groups": [
+        "ServiceDesk-Analysts"
+      ]
+    },
+    {
+      "Department": "Finance",
+      "JobTitle": "Financial Analyst",
+      "Groups": [
+        "Financial-Reporting"
+      ]
+    },
+    {
+      "Department": "Data Analytics",
+      "JobTitle": "Data Analyst",
+      "Groups": [
+        "BI-Reporting"
+      ]
+    }
+  ]
+}
